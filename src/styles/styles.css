@@ -1,0 +1,64 @@
+.layout {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    height: 500px;
+    gap: 20px;
+    padding: 20px;
+}
+
+.nav {
+    display: flex;
+    gap: 10px;
+    padding: 10px;
+}
+
+.thumbnail {
+    display: grid;
+    grid-column: 1;
+    grid-row: 1;
+    place-items: center;
+}
+
+.metadata {
+    grid-column: 1;
+    grid-row: 2;
+}
+
+.controls {
+    grid-column: 2 / -1;
+    grid-row: 1;
+
+    display: grid;
+    grid-template-rows: auto auto auto;
+    grid-template-columns: 10fr 1fr;
+    gap: 10px;
+}
+
+.formats {
+    display: flex;
+    height: 2rem;
+    grid-column: 1 / -1;
+}
+
+#download{
+    grid-column: 1 / -1;
+    margin-top: auto;
+    height: 40px;
+    cursor: pointer;
+}
+
+.console {
+    grid-column: 1 / -1;
+    grid-row: 3;
+}
+
+.border {
+    border: 3px double black;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+body {
+    background: #e2e2e2;
+}

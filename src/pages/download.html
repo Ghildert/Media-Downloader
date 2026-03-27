@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="../styles/styles.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Media Downloader by ghildert</title>
+    <script type="module" src="../scripts/audiovisual-format.js" defer></script>
+    <script type="module" src="../scripts/download.js" defer></script>
+    <script type="module" src="../scripts/metadata.js" defer></script>
+  </head>
+
+  <body>
+
+    <header class="nav">
+        <button onclick="window.location.href='../pages/download.html'">Download</button>
+        <button onclick="window.location.href='../pages/library.html'">Library</button>
+        <button onclick="window.location.href='../pages/setting.html'">Settings</button>
+        <button onclick="window.location.href='../pages/user.html'">User</button>
+        <button onclick="window.location.href='../pages/credits.html'">Credits</button>
+    </header>
+
+    <main class="layout border">
+
+        <div class="thumbnail border">
+          <img src="../assets/thumbnail.png" alt="thumbnail" width="256px" height="256px">
+        </div>
+
+        <div class="metadata border">META DATA</div>
+
+        <div class="controls border">
+            <input class="border" id="url" type="url" placeholder="Paste URL" style="grid-column: 1 / 2;">
+            <img class="border" src="../assets/clipboard.png" alt="clipboard" width="32px" height="32px" onclick="paste()">
+            
+            <div class="formats border">
+              <select name="" id="audio-format" style="flex: 1;">Audio Format</select>
+              <select name="" id="video-format" style="flex: 1;">Video Format</select>
+              <!-- <select name="" id="resolution-format" style="flex: 1;">Resolution Format</select>
+              <select name="" id="fps-format" style="flex: 1;">FPS</select> -->
+            </div>
+
+            <p style="position: relative; top: 60%;">Current Limit (seconds):</p>
+            <button class="border" id="download">Download</button>
+        </div>
+
+        <div class="console border" id="console">CONSOLE</div>
+
+    </main>
+
+</body>
+
+</html>
